@@ -5,7 +5,12 @@ import { fileURLToPath } from "url";
 import * as TsNode from 'ts-node';
 
 const coverageOptions:CoverageReportOptions = {
-    logging: "debug",
+    // logging: "debug",
+
+    reports: [
+        ["v8"],
+        ["console-details"]
+    ],
 
     entryFilter: {
         "**/node_modules/**": false,

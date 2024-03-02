@@ -4,10 +4,12 @@
   "description": "mcr-ts-node",
   "type": "module",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr ts-node ./src/example.test.ts -c mcr.config.ts"
+    "test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr ts-node ./src/example.ts -c mcr.config.ts -o coverage-reports/ts",
+    "mocha": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr mocha ./test/**/*.ts -c mcr.config.ts -o coverage-reports/mocha"
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/mocha": "^10.0.6",
     "cross-env": "^7.0.3",
     "mocha": "^10.3.0",
     "monocart-coverage-reports": "^2.6.2",

@@ -8,10 +8,11 @@
         "mocha": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr mocha ./test/**/*.ts -o coverage-reports/mocha"
     },
     "license": "MIT",
-    "dependencies": {},
     "devDependencies": {
         "@types/mocha": "^10.0.6",
         "cross-env": "^7.0.3",
+        "eslint": "^8.57.0",
+        "eslint-config-plus": "^1.0.6",
         "mocha": "^10.3.0",
         "monocart-coverage-reports": "^2.6.3",
         "ts-node": "^10.9.2"

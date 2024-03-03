@@ -1,7 +1,7 @@
-import {foo, bar} from '../src/example.js'
+import { bar } from '../src/example.js';
 
-describe('test', function () {
-  it('test', function () {
-    bar()
-  })
-})
+describe('test bar', function() {
+    it('test', function() {
+        bar();
+    });
+});

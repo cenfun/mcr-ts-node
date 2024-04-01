@@ -2,10 +2,11 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { getSnapshot, diffSnapshot } from 'monocart-coverage-reports';
 
 const coverageOptions = {
-    // logging: "debug",
+    // logging: 'debug',
 
     reports: [
         ['v8'],
@@ -19,7 +20,7 @@ const coverageOptions = {
 
     onEnd: (coverageResults) => {
 
-        const snapDir = path.resolve(import.meta.dirname, 'snapshot');
+        const snapDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'snapshot');
         if (!fs.existsSync(snapDir)) {
             fs.mkdirSync(snapDir, {
                 recursive: true

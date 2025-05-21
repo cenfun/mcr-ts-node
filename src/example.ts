@@ -1,26 +1,18 @@
-type Point = {
-    x: number;
-    y: number
-}
-
-const foo = function(p:Point) {
-    if(p) {
-        return p;
+export function sum(a: number, b: number) {
+    if (a === 2 && b === 18) {
+      return 20;
     }
-    
-    return null;
-}
-
-const bar = function() {
-    const p:Point = {
-        x:1,
-        y:2
+  
+    interface Something {
+      name: any;
     }
-    
-    console.log(p);
-}
-
-export {
-    foo,
-    bar 
-}
+  
+    console.log("hello" as unknown as Something);
+  
+    if (a === 1 && b === 33) {
+      return 34;
+    }
+  
+    return a + b;
+  }
+  

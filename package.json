@@ -6,7 +6,7 @@
     "scripts": {
         "test:ts-node": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr ts-node ./src/example.ts -o coverage-reports/ts-node",
         "test:mocha": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr mocha ./test/**/*.ts -o coverage-reports/mocha",
-        "test": "npm run test:ts-node && npm run test:mocha"
+        "test": "cross-env NODE_OPTIONS=\"--loader ts-node/esm --no-warnings\" npx mcr ts-node ./test/example.test.ts -o coverage-reports/ts"
     },
     "license": "MIT",
     "devDependencies": {
